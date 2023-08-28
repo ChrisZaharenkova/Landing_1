@@ -1,0 +1,123 @@
+@mixin bg-transition($ms: 300) {
+  -webkit-transition: background-color #{$ms}sms linear;
+  -ms-transition: background-color #{$ms}ms linear;
+  transition: background-color #{$ms}ms linear;
+}
+
+@mixin color-transition($ms: 500) {
+  -webkit-transition: color #{$ms}sms ease;
+  -ms-transition: color #{$ms}ms ease;
+  transition: color #{$ms}ms ease;
+}
+
+@mixin anchor {
+  @include color-transition;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  &:hover {
+    color: $primary-text-color;
+  }
+}
+
+@mixin animation-visible {
+  animation: 1s fadeIn;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+  99% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+
+@mixin btn {
+  font-weight: 400;
+  font-size: 22px;
+  padding: 23px 79px;
+  width: max-content;
+  text-decoration: none;
+  display: block;
+  box-sizing: border-box;
+  white-space: nowrap;
+  @include bg-transition;
+  &.btn-transparent {
+    color: $primary-text-color;;
+    border: 1px solid $primary-text-color;
+    &:hover {
+      background: $primary-text-color;
+      color: #fff;
+      border: 1px solid $primary-text-color;
+    }
+  }
+  &.btn-primary {
+    background: $primary-text-color;
+    color: #fff;
+    border: 1px solid $primary-text-color;
+    &:hover {
+      background: transparent;
+      color: $primary-text-color;
+      border: 1px solid $primary-text-color;
+    }
+  }
+  &.btn-form {
+    border-radius: 3%;
+    border: 1px solid #722ed1;
+    display: block;
+    color: #fff;
+    background: #722ed1;
+    padding: 12px 0;
+    text-decoration: none;
+    text-align: center;
+    width: 100%;
+    &:hover {
+      background: transparent;
+      color: #722ed1;
+      border: 1px solid #722ed1;
+    }
+  }
+  @media (max-width: 998px) {
+    padding: 23px 40px;
+    width: 100%;
+    font-size: 20px;
+  }
+}
+
+@mixin social-icon {
+  width: 32px;
+  height: 32px;
+  display: block;
+  @include bg-transition;
+  &:hover {
+    background: $primary-text-color;
+    &::before {
+      color: #fff;
+    }
+  }
+  &::before {
+    content: "";
+    display: block;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+  }
+  &.fb {
+    &::before {
+      background-image: url(./../../images/socials/fb.svg);
+    }
+  }
+  &.instagram {
+    &::before {
+      background-image: url(./../../images/socials/instagram.svg);
+    }
+  }
+  &.twitter {
+    &::before {
+      background-image: url(./../../images/socials/twitter.svg);
+    }
+  }
+}

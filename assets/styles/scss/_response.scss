@@ -1,0 +1,102 @@
+@media(max-width:1600px){
+    .promo{
+        min-height: 100vh;
+        padding: 0;
+    }
+}
+@media(max-width:1200px){
+  .tariffs{
+    &__wrapper{
+      grid-template-columns: repeat(3,1fr);
+    }
+  }
+
+
+}
+@media(max-width:991px){
+    .promo{
+        &__title{
+            font-size: 24px;
+        }
+        &__anime-left{
+            height: 300px;
+        }
+        &__anime-right{
+            width: 450px;
+        }
+    }
+    .tariffs{
+      &__wrapper{
+        grid-template-columns: repeat(2,1fr);
+      }
+    }
+    
+}
+@media(max-width:767px){
+    .promo{
+        &__title{font-size: 20px;}
+        &__anime-left{
+            left: -20%;
+        }
+        &__anime-right{
+            right: -30%;
+        }
+
+    }
+    @keyframes anime-left{
+        from{
+          left: -20%;
+        }
+        to{
+          left: -30%;
+        }
+      }
+      @keyframes anime-right{
+        from{
+          right: -20%;
+        }
+        to{
+          right: -30%;
+        }
+      }
+      .tariff{
+        &__order{
+          padding-top: 15px;
+        }
+      }
+}
+@media(max-width:480px){
+    .promo{
+        &__title{font-size: 18px;}
+
+
+    }
+    @keyframes anime-left{
+        from{
+          left: -20%;
+        }
+        to{
+          left: -50%;
+        }
+      }
+      @keyframes anime-right{
+        from{
+          right: -30%;
+        }
+        to{
+          right: -60%;
+        }
+      }
+      .tariffs{
+        display: none;
+      }
+      .tariff{
+        &__order{
+          padding-top: 30px;
+        }
+      }
+      .tariff__mobile{
+        display: block;
+      }
+
+}

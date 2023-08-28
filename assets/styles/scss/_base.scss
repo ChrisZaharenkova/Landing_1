@@ -1,0 +1,163 @@
+@import "variables";
+@import "mixins";
+//fonts
+@font-face {
+  font-family: 'helvetica';
+  src: url('/assets/fonts/helveticaneuecyr-roman-webfont.woff2') format('woff2'),
+       url('/assets/fonts/helveticaneuecyr-roman-webfont.woff') format('woff'),
+       url('/assets/fonts/') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+
+}
+
+
+@font-face {
+  font-family: 'helvetica';
+  src: url('helveticaneuecyr-medium-webfont.woff2') format('woff2'),
+       url('helveticaneuecyr-medium-webfont.woff') format('woff'),
+       url('helveticaneuecyr-medium-webfont.ttf') format('truetype');
+  font-weight:500;
+  font-style: normal;
+
+}
+
+
+@font-face {
+  font-family: 'helvetica';
+  src: url('/assets/fonts/helvetica-bold-webfont.woff2') format('woff2'),
+       url('/assets/fonts/helvetica-bold-webfont.woff') format('woff'),
+       url('/assets/fonts/helvetica-bold-webfont.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'helvetica';
+  src: url('/assets/fonts/helvetica-oblique-webfont.woff2') format('woff2'),
+       url('/assets/fonts/helvetica-oblique-webfont.woff') format('woff'),
+       url('/assets/fonts/helvetica-oblique-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "helvetica";
+  font-style: normal;
+  margin: 0;
+  color: $primary-text-color;
+  background-color: #F5F5F5;
+  color: $primary-text-color;
+}
+main{
+  position: relative;
+  overflow: hidden;
+}
+a{
+  color: $primary-text-color;
+}
+a:hover{
+  color: $primary-text-color;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+}
+
+h1,h2 {
+  margin: 0;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.btn-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.mobile-block {
+  display: none!important;
+}
+
+.btn {
+  @include btn;
+}
+
+.modal {
+  display: none;
+}
+
+.modal.is-open {
+  display: block;
+}
+a {
+  @include anchor;
+}
+
+p {
+  font-size: 18px;
+  line-height: 150%;
+  color: $secondary-text-color;
+}
+
+.space-100{
+  height: 100px;
+}
+.btn {
+  cursor: pointer;
+  color: white;
+  border-radius: 9px;
+  font-size: 13px;
+  font-weight: 500;
+  text-align: center;
+  width: 100%;
+  padding: 10px 0;
+  background:linear-gradient(to left,rgba(11, 128, 236, 1),rgba(111, 166, 251, 1));
+  &__btn-primary{
+
+  }
+}
+
+
+@media (max-width: 1600px) {
+  .inner {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media (max-width: 1180px) {
+
+  
+}
+@media(max-width:998px){
+  .inner {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+
+}
+@media (max-width: 479px) {
+  .inner {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .space-100{
+    height: 60px;
+  }
+}
+
+

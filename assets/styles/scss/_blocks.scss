@@ -1,0 +1,240 @@
+@import "variables";
+@import "mixins";
+.promo {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  padding: 260px 0 180px 0;
+  font-family: "helvetica";
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__inner{
+    position: relative;
+
+  }
+  &__wrapper{
+
+  }
+  &__title{
+    font-size: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+
+  }
+  &__title-item{
+    font-weight: bold;
+    padding: 15px 20px;
+    border-radius: 38px;
+
+    &:nth-child(1){
+      background-color: #E9F2FF;
+    }
+    &:nth-child(2){
+      background-color: #D6E6FF;
+    }
+    &:nth-child(3){
+      background-color: #C9DEFF;
+    } 
+  }
+  &__desc{
+    font-weight: bold;
+    text-transform: uppercase;
+
+  }
+  &__desc-title{
+    font-size: 24px;
+    color: $secondary-text-color;
+    margin-bottom: 10px;
+
+  }
+  &__desc-subtitle{
+    font-size: 20px;
+
+  }
+  /*
+  &__anime-left{
+    z-index: -1;
+    position: absolute;
+    bottom: 0;
+    left:0;
+    animation: anime-left 1.5s ease 500ms forwards;
+    &__anime-right{
+    z-index: -1;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    animation: anime-right 1.5s ease 500ms forwards;
+  }
+  }*/
+  &__anime-left{
+    background: url('/assets/images/anime-left.svg') no-repeat;
+    background-size: contain;
+    width: 360px;
+    height: 347px;
+    z-index: -1;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    animation: anime-left 1.5s ease 500ms forwards;
+  }
+  &__anime-right{
+    background: url('/assets/images/anime-right.svg') no-repeat;
+    background-size: contain;
+    width: 538px;
+    height: 401px;
+    z-index: -1;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    animation: anime-right 1.5s ease 500ms forwards;
+  }
+  
+}
+
+@keyframes anime-left{
+  from{
+    left: 0;
+  }
+  to{
+    left: -10%;
+  }
+}
+@keyframes anime-right{
+  from{
+    right: 0;
+  }
+  to{
+    right: -10%;
+  }
+}
+
+//------------------------TARRIF---------------------//
+.tariffs{
+  &__inner{
+
+  }
+  &__wrapper{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(4,1fr);
+    
+  }
+
+}
+.tariff{
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  &__name{
+    font-weight: bold;
+    font-size: 21px;
+  }
+  &__sale{
+    background:linear-gradient(to left,rgba(11, 128, 236, 0.6),rgba(111, 166, 251, 0.6));
+    padding: 10px;
+    border-radius: 9px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+  }
+  &__price-wrapper{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  &__price{
+    font-size: 48px;
+    font-weight: bold;
+    background-image:linear-gradient(to left,rgba(11, 128, 236, 1),rgba(111, 166, 251, 1));
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    display: inline-block;
+  }
+  &__remainder{
+    display: inline-block;
+    font-size: 16px;
+    transform: translateY(-25px);
+    background-image:linear-gradient(to left,rgba(11, 128, 236, 1),rgba(111, 166, 251, 1));
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+  &__period{
+    color: $text-color;
+    font-size: 16px;
+  }
+  &__options{
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+  &__option-title{
+    color: $text-color;
+    font-size: 13px;
+    margin-bottom: 12px;
+  }
+  &__option-value{
+    font-weight: 500;
+    font-size: 15px;
+  }
+  &__additional{
+    font-weight: 500;
+    font-size: 15px;
+  }
+  &__order{
+    cursor: pointer;
+    padding-top: 30px;
+  }
+  &__order-btn{
+
+  }
+
+}
+.tariff__mobile{display: none;}
+
+//----------------------DEFAULT-BLOCK-------------------//
+.default-block {
+  text-align: center;
+  &__inner{
+    background-color: white;
+    padding-top: 70px ;
+    padding-bottom: 70px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+
+  }
+  &__title{
+    font-size: 36px;
+    font-weight: bold;
+
+  }
+  &__desc{
+    font-size: 20px;
+  }
+  &__btn{
+    margin-top: 15px;
+    max-width: 245px;
+    font-weight: 500;
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+}
+
+
+
+
+
+
+
+
+
+
